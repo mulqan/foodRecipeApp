@@ -1,6 +1,8 @@
 # foodRecipeApp
 untuk memenuhi kebutuhan tugas akhir PBW
 
+ada perubahan
+
 ## Persiapan
 1. Install git di windows klik https://gitforwindows.org/
 2. Install seperti biasa sampai akhir
