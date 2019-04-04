@@ -4,12 +4,9 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Category extends Model
+class Picture extends Model
 {
-    public $timestamps = false;
-
-    public function category(){
-
+    public function picture(){
     	return $this->belongsTo('App\Recipe');
     }
 }

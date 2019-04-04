@@ -11,8 +11,20 @@ class Recipe extends Model
       return $this->belongsTo('App\User');
     }
 
-    public function liked()
-    {
-      return $this->belongsToMany('App\User', 'likes');
-    }
+		    public function liked()
+		    {
+		      return $this->belongsToMany('App\User', 'likes');
+		    }
+
+		    public function composition(){
+		    	return $this->hasMany('App\Composition', 'HasComposition');
+		    }
+
+	    public function picture(){
+	    	return $this->hasMany('App\Picture');
+	    }
+
+	public function category(){
+		return $this->hasOne('App\Category');
+	}
 }
