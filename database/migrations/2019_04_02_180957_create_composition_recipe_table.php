@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateHasCompositionsTable extends Migration
+class CreateCompositionRecipeTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,20 +13,20 @@ class CreateHasCompositionsTable extends Migration
      */
     public function up()
     {
-        Schema::create('has_compositions', function (Blueprint $table) {
+        Schema::create('composition_recipe', function (Blueprint $table) {
         	$table->unsignedBigInteger('recipe_id');
         	$table->unsignedBigInteger('composition_id');
-            $table->unsignedBigInteger('quantity');
+          $table->unsignedInteger('quantity');
 
-            $table->foreign('recipe_id')
-                  ->references('id')->on('recipes')
-                  ->onDelete('cascade');
+          $table->foreign('recipe_id')
+                ->references('id')->on('recipes')
+                ->onDelete('cascade');
 
-            $table->foreign('composition_id')
-                  ->references('id')->on('compositions')
-                  ->onDelete('cascade');
+          $table->foreign('composition_id')
+                ->references('id')->on('compositions')
+                ->onDelete('cascade');
 
-            $table->timestamps();
+          $table->timestamps();
         });
     }
 

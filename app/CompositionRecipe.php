@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class HasComposition extends Model
+class CompositionRecipe extends Model
 {
     //
 }
