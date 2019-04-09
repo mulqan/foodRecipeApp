@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+
+    <body>
+        <div id="app">
+            <div class="container">
+                <nav v-on:click>
+                    <a href="#" class="about" v-on:click>About</a>
+                    <a href="Signup.php" class="daftar" v-on:click>Daftar</a>
+                    <a href="Login.php" class="masuk" v-on:click>Masuk</a>
+                </nav>
+            </div>
+            <div class="form-wrap"> 
+                <form>
+                    <h1>Log In</h1>
+                    <div class="data">
+                        <input type="email" id="emaillog" placeholder="Email">
+                        <input type="password" id="passwordlog" placeholder="Password">
+                        <button class="button">Login</button>
+                    </div> 
+                </form>
+            </div>
+        </div>
+        <script src="./js/jquery-3.3.1-min.js"></script>
+        <script src="./js/java.js"></script>
+        <script src="./bootsrap/admin/css/bootstrap.css"></script>
+    </body>
+</html>
