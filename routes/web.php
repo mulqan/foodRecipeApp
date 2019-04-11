@@ -14,3 +14,13 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/dashboard', function(){
+  return view('dashboard');
+})->name('dashboard');
+
+Route::get('/unggah-resep', function(){
+  return view('unggah-resep');
+})->name('unggah-resep');
+
+Auth::routes();

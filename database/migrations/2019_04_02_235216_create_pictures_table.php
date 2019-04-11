@@ -15,7 +15,7 @@ class CreatePicturesTable extends Migration
     {
         Schema::create('pictures', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedBigInteger('recipe_id')
+            $table->unsignedBigInteger('recipe_id');
             $table->string('link');
 
             $table->foreign('recipe_id')
