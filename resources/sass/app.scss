@@ -8,8 +8,17 @@
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+// libraries
+@import "~@yaireo/tagify/dist/tagify.css";
+@import '~quill/dist/quill.bubble.css';
+@import "~croppie/croppie.css";
+
+// style
 @import "main";
 @import "dashboard";
+@import "resep";
+@import "profil";
 
 .navbar-laravel {
   background-color: #fff;

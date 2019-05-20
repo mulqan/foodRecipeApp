@@ -7,6 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 class Composition extends Model
 {
     public function compisition(){
-    	return $this->belongsToMany('App\Recipe')
+    	return $this->belongsToMany('App\Recipe');
     }
 }

@@ -4,14 +4,14 @@
 <div class="container mt-4">
   <div class="card">
       <div class="card-body">
+        <form method="POST" id="recipeForm" action="{{ route('unggah-resep') }}">
+            @csrf
         <div class="row">
           <div class="col-12">
             <h3>Unggah Resep</h3>
             <hr>
           </div>
-          <div class="col-12 col-md-8">
-            <form method="POST" action="{{ route('register') }}">
-                @csrf
+          <div class="col-12 col-md-7">
                 <div class="form-group">
                     <label for="judul">Judul Resep</label>
                     <input id="judul" type="text" class="form-control{{ $errors->has('judul') ? ' is-invalid' : '' }}" name="judul" value="{{ old('judul') }}" placeholder="Judul Resep" required autofocus>
@@ -41,30 +41,54 @@
 
                 <div class="form-group">
                   <label for="password">Bahan</label>
-                  <div class="form-row">
-                     <div class="col-8">
-                       <input type="text" class="form-control" placeholder="Nama Bahan">
-                     </div>
-                     <div class="col">
-                       <input type="text" class="form-control" placeholder="Kuantitas">
+                  <div id="inputBahanWrapper">
+                    <div class="form-row mb-2">
+                       <div class="col-8">
+                         <input type="text" class="form-control" name="nama_bahan[]" placeholder="Nama Bahan">
+                       </div>
+                       <div class="col">
+                         <input type="text" class="form-control" name="kuantitas_bahan[]" placeholder="Kuantitas">
+                       </div>
+                       <button type="button" class="btn btn-link text-danger bahan-input-delete-btn">
+                         <i class="fa fa-trash-o" aria-hidden="true"></i>
+                       </button>
                      </div>
                    </div>
-                   <button type="button" class="btn btn-flat float-right">Tambah Bahan</button>
+                   <div class="d-flex justify-content-end mt-2">
+                     <button type="button" class="btn btn-flat" id="inputBahanBtn">
+                       <i class="fa fa-plus-circle" aria-hidden="true"></i> Tambah Bahan
+                     </button>
+                   </div>
                 </div>
-
                 <div class="form-group">
-                  <label for="password-confirm">Konfirmasi Password</label>
-                  <input type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" id="password-confirm" name="password_confirmation"  placeholder="Konfirmasi Password" required>
+                  <label>Prosedur</label>
+                  <div class="form-control" id="editor"></div>
+                  <input type="hidden" id="editor-result">
                 </div>
-
-                <button type="submit" class="btn btn-primary">Register</button>
-            </form>
           </div>
-          <div class="col">
-
+          <div class="col mt-3 mt-md-0">
+            <div class="alert alert-danger d-none" id="uploadMessage" role="alert">
+               Maksimum upload 5 file
+               <button type="button" class="close"
+               onclick="document.getElementById('uploadMessage').classList.add('d-none')">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div id="uploadImage" class="dropzone">
+              <div class="fallback">
+                <input name="image[]" type="file" multiple />
+              </div>
+              <div class="card-columns" id="previewContainer">
+              </div>
+            </div>
+          </div>
+          <div class="col-12">
+            <button type="submit" class="btn btn-primary mt-3">Register</button>
           </div>
         </div>
+        </form>
       </div>
   </div>
 </div>
+
 @endsection

@@ -38,6 +38,7 @@ body {
       flex: 1;
       border: 0;
       background-color: transparent;
+      padding: 0;
     }
     .search-icon {
       border: 0;
@@ -48,7 +49,30 @@ body {
         font-size: 18px;
       }
     }
+    .tagify__input {
+      margin: 1px 5px;
+      padding: 0;
+    }
+    .tagify__tag {
+      margin: 2px 0 2px 2px;
+      &>div {
+        padding: .05em .5em;
+        .tagify__tag-text {
+              padding: 0 12px 0 0;
+        }
+      }
+      &:hover:not([readonly]) div::before {
+        top: -0.5px;
+        right: -0.5px;
+        bottom: -0.5px;
+        left: -0.5px;
+      }
+    }
   }
+}
+
+.tagify__tag:hover:not([readonly]) div::before {
+
 }
 
 .navbar {
