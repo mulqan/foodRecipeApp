@@ -13,7 +13,7 @@ class PageController extends Controller
    */
     public function index()
     {
-      // code...
+      return view('welcome');
     }
 
     /**
@@ -23,6 +23,6 @@ class PageController extends Controller
      */
       public function dashboard()
       {
-        // code...
+        return view('dashboard');
       }
 }

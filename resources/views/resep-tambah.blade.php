@@ -4,7 +4,7 @@
 <div class="container mt-4">
   <div class="card">
       <div class="card-body">
-        <form method="POST" id="recipeForm" action="{{ route('unggah-resep') }}">
+        <form method="POST" id="recipeForm" action="{{ route('resep.simpan') }}">
             @csrf
         <div class="row">
           <div class="col-12">

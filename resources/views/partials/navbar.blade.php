@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark">
   <div class="container">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a class="navbar-brand" href="{{ route('home') }}">Navbar</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -18,7 +18,7 @@
             <a class="nav-link" href="{{ route('dashboard') }}">Dashboard</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{ route('unggah-resep') }}">Unggah Resep</a>
+            <a class="nav-link" href="{{ route('resep.tambah') }}">Unggah Resep</a>
           </li>
           <li class="nav-item dropdown">
               <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -26,8 +26,8 @@
               </a>
 
               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="{{ route('user.profil') }}">Profil</a>
-                  <a class="dropdown-item" href="{{ route('user.password') }}">Password</a>
+                  <a class="dropdown-item" href="{{ route('profil.edit') }}">Profil</a>
+                  <a class="dropdown-item" href="{{ route('password.edit') }}">Password</a>
                   <a class="dropdown-item" href="{{ route('logout') }}"
                      onclick="event.preventDefault();
                                    document.getElementById('logout-form').submit();">

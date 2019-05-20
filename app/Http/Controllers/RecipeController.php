@@ -7,23 +7,13 @@ use Illuminate\Http\Request;
 class RecipeController extends Controller
 {
     /**
-     * Menampilkan semua resep berdasarkan search
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        //
-    }
-
-    /**
      * Menampilkan halaman tambah resep
      *
      * @return \Illuminate\Http\Response
      */
     public function create()
     {
-        //
+        return view('resep-tambah');
     }
 
     /**
@@ -45,7 +35,7 @@ class RecipeController extends Controller
      */
     public function show($id)
     {
-        //
+        return view('resep-tampil');
     }
 
     /**
@@ -56,7 +46,7 @@ class RecipeController extends Controller
      */
     public function edit($id)
     {
-        //
+      return view('resep-edit');
     }
 
     /**
