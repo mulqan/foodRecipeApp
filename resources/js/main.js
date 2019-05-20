@@ -6,6 +6,7 @@ if ($('#searchInput').length) {
     var clickedOpt = parseInt($(this).val());
     if (clickedOpt) {
       $('#searchInput').attr('placeholder', 'Cari resep berdasarkan bahan...');
+      $('#searchInput').attr('name', 'search-by-bahan');
       if (tagify == undefined) {
         tagify = new Tagify(input, {
           whitelist:[],
@@ -18,6 +19,7 @@ if ($('#searchInput').length) {
       }
     } else {
       $('#searchInput').attr('placeholder', 'Cari resep berdasarkan judul...');
+      $('#searchInput').attr('name', 'search-by-judul');
       if (tagify != undefined) {
         tagify.destroy();
         tagify = undefined;

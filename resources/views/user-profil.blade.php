@@ -13,7 +13,7 @@
                 <div class="card-body">
                     <h3>Profil</h3>
                     <hr>
-                    <form method="POST" action="{{ route('register') }}">
+                    <form method="POST" action="">
                         @csrf
                         <div class="form-group">
                             <label for="name">Nama</label>

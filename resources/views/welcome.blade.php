@@ -14,7 +14,7 @@
         </label>
       </div>
       <div class="search-bar">
-        <input class="search-input" id="searchInput" type="text" name="search" placeholder="Cari resep berdasarkan judul...">
+        <input class="search-input" id="searchInput" type="text" name="search-by-judul" placeholder="Cari resep berdasarkan judul...">
         <button class="search-icon">
           <i class="fa fa-search" aria-hidden="true"></i>
         </button>
