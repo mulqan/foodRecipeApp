@@ -13,12 +13,14 @@
           <img src="{{ asset('icon\onion.svg') }}" alt="cari berdasarkan bahan">
         </label>
       </div>
-      <div class="search-bar">
-        <input class="search-input" id="searchInput" type="text" name="search-by-judul" placeholder="Cari resep berdasarkan judul...">
-        <button class="search-icon">
-          <i class="fa fa-search" aria-hidden="true"></i>
-        </button>
-      </div>
+      <form action="{{ url()->current() }}">
+        <div class="search-bar">
+            <input class="search-input" id="searchInput" type="text" name="search-by-judul" placeholder="Cari resep berdasarkan judul...">
+            <button class="search-icon">
+            <i class="fa fa-search" aria-hidden="true"></i>
+            </button>
+        </div>
+      </form>
     </div>
     <div class="row mt-4">
       @for ($i=0; $i < 10; $i++)
