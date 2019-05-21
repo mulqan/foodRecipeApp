@@ -12,6 +12,9 @@ window.Tagify = require('@yaireo/tagify/dist/tagify.min.js');
 window.Quill = require('quill');
 window.Dropzone = require('./dropzone');
 Window.croppie = require('croppie');
+window.owlCarousel = require('owl.carousel/dist/owl.carousel.min');
+
+// require('../../node_modules/owl.carousel/dist/owl.carousel.min');
 
 // script
 require('./main');

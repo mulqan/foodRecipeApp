@@ -1,21 +1,23 @@
-var image = $('#uploadAvatar').croppie({
-  enableExif: true,
-  enforceBoundary: true,
-  viewport: {
-    width: 310,
-    height: 310,
-    type: 'circle',
-  },
-  boundary: {
-    width: 300,
-    height: 300,
-  },
-});
+if ($('#uploadAvatar').length) {
+  var image = $('#uploadAvatar').croppie({
+    enableExif: true,
+    enforceBoundary: true,
+    viewport: {
+      width: 310,
+      height: 310,
+      type: 'circle',
+    },
+    boundary: {
+      width: 300,
+      height: 300,
+    },
+  });
 
 
-image.croppie('bind', {
-  url: '',
-});
+  image.croppie('bind', {
+    url: '',
+  });
+}
 
 $('#browseFileInput').on('change', function(ev){
   if (this.files.length > 0) {

@@ -109,3 +109,24 @@
     }
   }
 }
+
+.resep-tampil-action {
+  a {
+    font-size: 18px;
+    color: $text-muted;
+  }
+}
+
+
+
+.bahan-wrapper {
+  border: 2px dashed lighten($primary-color, 20);
+  padding: 10px 14px;
+  border-radius: 8px;
+  .table-bahan {
+    width: 100%;
+    .nama-bahan {
+      min-width: 30%;
+    }
+  }
+}

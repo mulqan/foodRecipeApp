@@ -47,3 +47,14 @@ function onInput( e ){
       tagify.dropdown.show.call(tagify, value); // render the suggestions dropdown
     })
 }
+
+
+//owl carousel
+$(window).on('load', function(){
+  $('.owl-carousel').owlCarousel({
+      margin:10,
+      loop:false,
+      autoWidth:true,
+      items:4,
+  });
+});

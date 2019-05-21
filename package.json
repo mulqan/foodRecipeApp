@@ -26,6 +26,7 @@
     "dependencies": {
         "@yaireo/tagify": "^2.19.1",
         "croppie": "^2.6.4",
+        "owl.carousel": "^2.3.4",
         "quill": "^1.3.6"
     }
 }

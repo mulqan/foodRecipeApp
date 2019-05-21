@@ -23,21 +23,26 @@
     <div class="row mt-4">
       @for ($i=0; $i < 10; $i++)
         <div class="col-md-4 col-lg-3">
-          <div class="card card-thumbnail mb-4">
-            <img class="card-img-top" src="https://jatenglive.com/images/news/Adi-Culinary--Makanan-Ala-Barat-Harga-Kaki-Lima-news20171020-adiss.jpg" alt="Card image cap">
-            <div class="card-body">
-              <p class="recipe-title">Fusilli Bayam Rasa Lokal</p>
-              <p class="recipe-author">oleh Mama Ayes</p>
-              <div class="recipe-action">
-                <a href="#" class="btn btn-love">
-                  <i class="fa fa-heart" aria-hidden="true"></i>
-                </a>
-                <a href="#" class="btn btn-share">
-                  <i class="fa fa-share-alt" aria-hidden="true"></i>
-                </a>
+          <a href="{{ route('resep.tampil', $i) }}">
+            <div class="card card-thumbnail mb-4">
+              <img class="card-img-top" src="https://jatenglive.com/images/news/Adi-Culinary--Makanan-Ala-Barat-Harga-Kaki-Lima-news20171020-adiss.jpg" alt="Card image cap">
+              <div class="card-body">
+                <p class="recipe-title">Fusilli Bayam Rasa Lokal</p>
+                <p class="recipe-author">oleh Mama Ayes</p>
+                <div class="recipe-action">
+                  <small>24 Mei 2019 10:00</small>
+                  <div>
+                    <a href="#" class="btn btn-love">
+                      <i class="fa fa-heart" aria-hidden="true"></i><small class="ml-1">10</small>
+                    </a>
+                    <a href="#" class="btn btn-share">
+                      <i class="fa fa-share-alt" aria-hidden="true"></i>
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
+          </a>
         </div>
       @endfor
     </div>
