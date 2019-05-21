@@ -1,3 +1,19 @@
+# foodRecipeApp
+untuk memenuhi kebutuhan tugas akhir PBW
+
+## Persiapan
+1. Install git di windows klik https://gitforwindows.org/
+2. Install seperti biasa sampai akhir
+3. Buka cmd
+4. Jalani command berikut:
+```bash
+$ git config --global user.name "Nama Lengkap"
+$ git config --global user.email "contoh@email.com"
+```
+
+## Cara kontribusi
+Baca https://www.petanikode.com/github-workflow/
+=======
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
 <p align="center">

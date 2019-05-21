@@ -1,0 +1,87 @@
+*{margin: 0; padding: 0;}
+        nav a{
+            padding: 8px;
+            border: 2px solid grey;
+            font-family: 'Times New Roman', Times, serif;
+            text-decoration-line: none;
+            background: #aaaca0;
+            color: black;
+        }
+
+        a:hover{
+            background: #86887b;
+            transition: .6s;
+        }
+
+        body{
+            background: #ffe599; 
+            font-family: sans-serif;
+        }
+        
+        .form-wrap{
+            width: 320px; 
+            background: #ccc; 
+            padding: 40px 20px; 
+            box-sizing: border-box; 
+            position: fixed; 
+            left: 50%; 
+            top: 50%; 
+            transform: translate(-50%,-50%);
+        }
+
+        h1{
+            text-align: center; 
+            color: black; 
+            font-weight: normal; 
+            margin-bottom: 20px; 
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
+            font-size: 2.5em; 
+            font-weight: bold;
+        }
+
+        input{
+            width: 100%; 
+            background: none; 
+            border: 2px solid black; 
+            border-radius: 3px; 
+            padding: 6px 15px; 
+            box-sizing: border-box; 
+            margin-bottom: 10px; 
+            font-size: 16px; 
+            color: black;
+        }
+
+
+        .data{
+            background: white; 
+            border-color: black
+        }
+
+        ::placeholder{color: grey;}
+
+        .container{
+            text-align: right; 
+            padding: 15px 10px; 
+            background: #ffd180;
+        }
+        .button{
+            width: 100%; 
+            background: none; 
+            border: 2px solid black; 
+            border-radius: 3px; 
+            padding: 6px 15px; 
+            box-sizing: border-box; 
+            margin-bottom: 10px; 
+            font-size: 16px; 
+            color: black;
+            background: #aaaca0; 
+            border: 2px solid black; 
+            cursor: pointer; 
+            color: black;
+            
+        }
+        .button:hover{
+            background: #86887b; 
+            transition: .6s;
+        }
+
