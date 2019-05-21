@@ -35,7 +35,7 @@
               <p class="recipe-author">oleh Mama Ayes</p>
               <div class="recipe-action">
                 <a href="#" class="btn btn-love">
-                  <i class="fa fa-heart" aria-hidden="true"></i>
+                  <i class="fa fa-heart" aria-hidden="true">{{$likeCtr}}</i>
                 </a>
                 <a href="#" class="btn btn-share">
                   <i class="fa fa-share-alt" aria-hidden="true"></i>

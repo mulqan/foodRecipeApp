@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use App\Category;
+use App\Like;
 
 class RecipeController extends Controller
 {
@@ -33,9 +36,16 @@ class RecipeController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($post_id)
     {
-        return view('resep-tampil');
+      $posts = new Post;
+      $posts = Post::where('id','=', $post_id)->get();
+      $likePost = Post::find($post_id);
+      $likeCtr = Like::where(['post_id' => $likePost->id])->count();
+      //return $likeCtr;
+      //exit();
+      $categories = Category::all();
+      return view('resep-tampil', ['posts' => $posts, 'categories' => $categories, 'likeCtr' => $likeCtr]);
     }
 
     /**
@@ -81,7 +91,22 @@ class RecipeController extends Controller
 
     public function like($id)
     {
-      // code...
+      $loggedin_user = Auth::user()->id;
+      $like_user = Like::where(['user_id' => $loggedin_user,'post_id' => $id])->first();
+      if(empty($like_user->user_id)){
+        $user_id = Auth::user()->id;
+        $email = Auth::user()->email;
+        $post_id = $id;
+        $like = new Like;
+        $like->user_id = $user_id;
+        $like->email = $email;
+        $like->post_id = $post_id;
+        $like->save();
+        return redirect("/view/{$id}");
+
+      } else {
+        return redirect("/view/{$id}");
+      }
     }
 
     /**
