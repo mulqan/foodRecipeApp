@@ -25,4 +25,17 @@ class PageController extends Controller
       {
         return view('dashboard');
       }
+    //   Mengaktifkan search
+    public function paginate(Request $request)
+    {
+        $this->validate($request, [
+            'limit' => 'integer',
+        ]);
+        $users = Resep::when($request->keyword, function ($query) use ($request) {
+            $query->where('judul', 'like', "%{$request->keyword}%")
+                ->orWhere('bahan', 'like', "%{$request->keyword}%");
+        })->paginate($request->limit);
+        $users->appends($request->only('keyword', 'limit'));
+        return view('resep.paginate', compact('resep'));
+    }
 }

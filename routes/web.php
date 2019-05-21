@@ -10,7 +10,6 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
 Route::get('/', 'PageController@index')->name('home');
 Route::get('/dashboard', 'PageController@dashboard')->name('dashboard');
 
