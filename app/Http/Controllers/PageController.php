@@ -26,7 +26,7 @@ class PageController extends Controller
         return view('dashboard');
       }
     //   Mengaktifkan search
-    public function paginate(\Illuminate\Http\Request $request)
+    public function paginate(Request $request)
     {
         $this->validate($request, [
             'limit' => 'integer',
